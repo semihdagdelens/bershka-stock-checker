@@ -5,19 +5,19 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import os
+
 
 # --- AYARLAR ---
 URUN_LISTESI = [
     "https://www.bershka.com/tr/f%C4%B1r%C3%A7alanm%C4%B1%C5%9F-efektli-desenli-s%C3%BCveter-c0p200314447.html?colorId=800",
     "https://www.bershka.com/tr/teknik-spor-ceket-c0p189277209.html?colorId=401"
-   
+
 ]
 
 HEDEF_BEDEN = "M"
-# DİKKAT: Tokenin buradaki mesajda göründüğü için internete düştü. 
-# Güvenlik için BotFather'dan yeni token almanı öneririm. Şimdilik seninkileri koydum:
-TELEGRAM_TOKEN = "8495759843:AAHsFKuoITm87HdEBUEkAC8QiudWFWlddnc"
-CHAT_ID = "1564732604"
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
 
 def send_telegram_message(message):
     try:
@@ -102,5 +102,4 @@ def toplu_kontrol():
 
 # --- BURASI DEĞİŞTİ: WHILE LOOP YOK, TEK SEFER ÇALIŞIR ---
 if __name__ == "__main__":
-
     toplu_kontrol()
