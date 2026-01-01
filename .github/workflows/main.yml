@@ -1,0 +1,24 @@
+name: Bershka Stok Takip
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'  # 20 dakikada bir çalıştırır
+  workflow_dispatch:        # Manuel tetikleme butonu
+
+jobs:
+  run_bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Çek
+        uses: actions/checkout@v3
+
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Kütüphaneleri Yükle
+        run: pip install -r requirements.txt
+
+      - name: Botu Çalıştır
+        run: python main.py
