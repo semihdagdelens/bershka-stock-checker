@@ -11,9 +11,7 @@ import os
 # --- AYARLAR ---
 URUN_LISTESI = [
     "https://www.bershka.com/tr/f%C4%B1r%C3%A7alanm%C4%B1%C5%9F-efektli-desenli-s%C3%BCveter-c0p200314447.html?colorId=800",
-    "https://www.bershka.com/tr/teknik-spor-ceket-c0p189277209.html?colorId=401",
-    "https://www.bershka.com/tr/boxy-fit-k%C4%B1sa-kesim-fermuarl%C4%B1-sweatshirt-c0p197654632.html?colorId=428"
-    
+    "https://www.bershka.com/tr/teknik-spor-ceket-c0p189277209.html?colorId=401"
 
 ]
 
